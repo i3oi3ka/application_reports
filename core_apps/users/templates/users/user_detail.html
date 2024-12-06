@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h1 class="my-4">Інформація про користувача</h1>
+    <ul class="list-group">
+
+        <li class="list-group-item">
+            <img src="{{ user_info.profile.avatar.url }}" alt="Аватар користувача"
+                 class="img-fluid rounded-circle" width="200">
+            <h2>{{ user_info.username }}</h2>
+            <p>Імя: {{ user_info.first_name }}</p>
+            <p>Прізвище: {{ user_info.last_name }}</p>
+            <p>Дата народження: {{ user_info.birthday }}</p>
+            <p>Вік: {{ user_info.age }}</p>
+            <p>Email: {{ user_info.email }}</p>
+            <p>Phone_number: {{ user_info.phone_number }}</p>
+            <p>Date joined: {{ user_info.date_joined }}</p>
+            <p>Bio: {{ user_info.profile.bio }}</p>
+            <!-- Додайте інші поля користувача, які вам потрібні -->
+        </li>
+    </ul>
+
+</div>
+{% endblock %}
